@@ -34,6 +34,7 @@ margin-top: 25px;
    /* box-shadow:0 0 5px rgba(0,0,0,0.1); */
   height: 600px;
   margin-left: 10px;
+  
 }
 .menu__item{
   font-weight: 600;
@@ -70,7 +71,8 @@ margin-top: 25px;
 .block__item:last-child{
   margin-bottom: 50px;
 }
-.block__name{
+
+.name{
   text-align: center;
   font-size: 20px;
  margin: 20px 0px; 
@@ -113,9 +115,25 @@ li{
 li:last-child{
   margin-bottom: 30px;
 }
+.switch{
+  display: flex;
+   margin: 0 auto;
+}
+.btn{
+  padding: 10px;
+  background-color: rgb(92, 184, 92);
+ margin: 0 10px;
+  border-radius: 5px;
+}
+.btn a{
+  color: #fff;
+  font-size: 13px;
+
+}
+
 /* timeline */
 .timeline-area{
-  margin: 20px auto;
+  margin: 20px 10px;
   width: 100%;
   border-left: 2px solid rgb(1, 162, 166);
   padding: 0px 20px 0px 30px;
@@ -152,7 +170,7 @@ li:last-child{
   border-width: 8px;
   position: absolute;
   left: -17px;
-  top: 10px;
+  top: 8px;
 }
 .timeline__date{
   margin: 0;
