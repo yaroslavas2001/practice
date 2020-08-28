@@ -9,14 +9,26 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 $text = $_POST['text'];
 $file = $_FILES['myfile'];
-
+$file1 = $_FILES['myfile1'];
+$file1 = $_FILES['myfile2'];
+$file1 = $_FILES['myfile3'];
+$file1 = $_FILES['myfile4'];
+$file1 = $_FILES['myfile5'];
+$file1 = $_FILES['myfile6'];
+$file1 = $_FILES['myfile7'];
+$file1 = $_FILES['myfile8'];
+$file1 = $_FILES['myfile9'];
+$file1 = $_FILES['myfile10'];
+$file1 = $_FILES['myfile11'];
+$select = $_POST['select'];
 // Формирование самого письма
 $title = "Заголовок письма";
 $body = "
 <h2>Новое письмо</h2>
 <b>Имя:</b> $name<br>
-<b>Почта:</b> $email<br><br>
-<b>Сообщение:</b><br>$text
+<b>Почта:</b> $email<br>
+<b>Сообщение:</b>$text<br>
+<b>Направление</b>$select<br>
 ";
 
 // Настройки PHPMailer

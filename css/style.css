@@ -179,3 +179,16 @@ li:last-child{
   margin: 0;
 }
 /* /timeline */
+
+.eText,
+option{
+  margin: 10px;
+  font-size:13px;
+  line-height: 1.3;
+}
+input,
+select{
+  margin: 10px;
+  color: #000000;
+  border: 1px solid rgba(0,0,0, 0.3);
+}
