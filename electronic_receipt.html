@@ -3,60 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
   <title>Электронное поступление</title>
 </head>
 <body>
-  <div class="container" style="margin-top:100px;">
-    <div class="row justify-content-center">
-        <div class="col-md-6 col-md-offset-3" align="center">
-            <input id="name" placeholder="Name" class="form-control">
-            <input id="email" placeholder="Email" class="form-control">
-            <input id="subject" placeholder="Subject" class="form-control">
-            <textarea class="form-control" id="body" placeholder="Email Body"></textarea>
-            <input type="button" onclick="sendEmail()" value="Send An Email" class="btn btn-primary">
-        </div>
+  <div class="enrollee">
+    <div class="menu">
+  
+     <div class="menu__block">
+       <h3 class="menu__item">Поступление</h3>
+       <a class="menu__link green" href="/applicant_calendar.html">Календарь абитуриента</a>
+       <a class="menu__link green" href="/admission_rules.html">Правила приема</a>
+       <a class="menu__link green" href="/cost_of_education.html">Стоимость обученния</a>
+       <a class="menu__link green" href="/directions_and_specialties.html">Направления и специальности</a>
+       <a class="menu__link green" href="/electronic_receipt.html">Электронное поступление</a>
+       <!-- <a class="menu__link" href="">Новости и объявления</a> -->
+     </div>
+  
+     <div class="menu__block">
+      <h3 class="menu__item">Подготовка к поступлению</h3>
+      <a class="menu__link green" href="">Заочная школа</a>
+      <a class="menu__link green" href="">Тестирование</a>
+     </div>
+  
+     <div class="menu__block">
+      <h3 class="menu__item">Дополнительная информация</h3>
+      <a class="menu__link green" href="">Информация об общежиитиях</a>
+     </div>
+  
+    </div><!-- /menu -->
+    <div class="block">
+      <form enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')">
+        <p>Имя</p>
+        <input placeholder="Представьтесь" name="name" type="text" >
+        <p>Email</p>
+        <input placeholder="Укажите почту" name="email" type="text" >
+        <p>Сообщение</p>
+        <textarea name="text"></textarea>
+        <p>Прикрепить файлы</p>
+        <input type="file" name="myfile[]" multiple id="myfile">
+        <p><input value="Отправить" type="submit"></p>
+     </form>
     </div>
-</div>
+  </div>
 <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-        function sendEmail() {
-            var name = $("#name");
-            var email = $("#email");
-            var subject = $("#subject");
-            var body = $("#body");
-
-            if (isNotEmpty(name) && isNotEmpty(email) && isNotEmpty(subject) && isNotEmpty(body)) {
-                $.ajax({
-                   url: 'sendEmail.php',
-                   method: 'POST',
-                   dataType: 'json',
-                   data: {
-                       name: name.val(),
-                       email: email.val(),
-                       subject: subject.val(),
-                       body: body.val()
-                   }, success: function (response) {
-                        if (response.status == "success")
-                            alert('Email Has Been Sent!');
-                        else {
-                            alert('Please Try Again!');
-                            console.log(response);
-                        }
-                   }
-                });
-            }
+<script>
+  function send(event, php){
+  console.log("Отправка запроса");
+  event.preventDefault ? event.preventDefault() : event.returnValue = false;
+  var req = new XMLHttpRequest();
+  req.open('POST', php, true);
+  req.onload = function() {
+    if (req.status >= 200 && req.status < 400) {
+      json = JSON.parse(this.response); // Ебанный internet explorer 11
+        console.log(json);
+          
+        // ЗДЕСЬ УКАЗЫВАЕМ ДЕЙСТВИЯ В СЛУЧАЕ УСПЕХА ИЛИ НЕУДАЧИ
+        if (json.result == "success") {
+          // Если сообщение отправлено
+          alert("Сообщение отправлено");
+        } else {
+          // Если произошла ошибка
+          alert("Ошибка. Сообщение не отправлено");
         }
-
-        function isNotEmpty(caller) {
-            if (caller.val() == "") {
-                caller.css('border', '1px solid red');
-                return false;
-            } else
-                caller.css('border', '');
-
-            return true;
-        }
-    </script>
+      // Если не удалось связаться с php файлом
+      } else {alert("Ошибка сервера. Номер: "+req.status);}}; 
+  
+  // Если не удалось отправить запрос. Стоит блок на хостинге
+  req.onerror = function() {alert("Ошибка отправки запроса");};
+  req.send(new FormData(event.target));
+  }
+  </script>
 
 </body>
 </html>
