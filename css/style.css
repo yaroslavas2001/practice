@@ -62,6 +62,7 @@ margin-top: 25px;
   flex-direction: column;
   background-color: #fff;
   width: 80%;
+  margin: 10px auto;
 }
 .block__item{
   box-shadow:0 0 5px rgba(1,162,166,0.3);
@@ -215,4 +216,84 @@ font-size: 15px;
 .rule__item:focus,
 .rule__item:hover{
 color: rgb(245, 225, 4);
+}
+.name__h3{
+font-weight: 600;
+font-size: 16px;
+margin: 10px 0;
+}
+.school__text{
+  font-size: 14px;
+  color: rgb(72, 76, 80);
+  line-height: 20px;
+}
+.black{
+  color: #000000;
+}
+.school__text a{
+  color: #000000;
+}
+.school__img{
+  width: 100%;
+  margin: 10px auto;
+  padding-bottom: 30px;
+}
+.test__item{
+  display: flex;
+  margin: 10px;
+  color: #000000;
+  transition: .2s;
+align-items: center;
+line-height: 26px;
+font-size: 15px;
+}
+.test__item img{
+  margin:0 10px;
+}
+.test__item:active,
+.test__item:focus,
+.test__item:hover{
+color: rgb(245, 225, 4);
+}
+.autoplay{
+
+
+}
+.slider{
+  height:500px;  
+  width: 100%; 
+  overflow: hidden;
+  position: relative;
+}
+.slider img{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+  width: 100%;
+  height: auto;
+}
+.arrow{
+  
+  display: flex;
+  justify-content: space-between;
+  margin-top: -280px;
+}
+.prev,
+.next{
+background-color: rgba(255,255,255,0.5);
+width: 50px;
+height: 50px;
+z-index: 29;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+.prev img,
+.next img{
+  width: 20px;
+  height: 20px;
 }
