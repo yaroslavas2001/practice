@@ -199,3 +199,20 @@ margin: 25px 40%;
   height: 40px;
   background-color: rgb(92, 184, 92);
 }
+.rule__item{
+  display: flex;
+  margin: 10px;
+  color: #000000;
+  transition: .2s;
+align-items: center;
+line-height: 26px;
+font-size: 15px;
+}
+.rule__item img{
+  margin:0 10px;
+}
+.rule__item:active,
+.rule__item:focus,
+.rule__item:hover{
+color: rgb(245, 225, 4);
+}
