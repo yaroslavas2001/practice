@@ -20,6 +20,8 @@ $file1 = $_FILES['myfile8'];
 $file1 = $_FILES['myfile9'];
 $file1 = $_FILES['myfile10'];
 $file1 = $_FILES['myfile11'];
+$file1 = $_FILES['myfile12'];
+$file1 = $_FILES['myfile13'];
 $select = $_POST['select'];
 // Формирование самого письма
 $title = "Заголовок письма";
