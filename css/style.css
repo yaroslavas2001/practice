@@ -256,7 +256,7 @@ font-size: 15px;
 color: rgb(245, 225, 4);
 }
 .autoplay{
-
+margin-bottom: 10px;
 
 }
 .slider{
@@ -279,6 +279,7 @@ color: rgb(245, 225, 4);
   display: flex;
   justify-content: space-between;
   margin-top: -280px;
+  margin-bottom: 230px;
 }
 .prev,
 .next{
