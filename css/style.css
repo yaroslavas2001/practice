@@ -298,3 +298,22 @@ align-items: center;
   width: 20px;
   height: 20px;
 }
+.direction__item{
+  display: flex;
+  align-items: center;
+}
+.direction__name{
+  font-size: 17px;
+  text-transform: uppercase;
+  margin: 20px;
+}
+.profile{
+  font-size: 15px;
+  margin-left: 20px;
+}
+.direction{
+  background-color: #0077bb;
+ border-radius: 5px;
+  color: #fff;
+  margin: 10px 0px;
+}
