@@ -175,6 +175,8 @@ li:last-child{
 }
 .timeline__date{
   margin: 0;
+  font-size: 17px;
+  font-weight: 600;
 }
 .timeline__text{
   margin: 0;
