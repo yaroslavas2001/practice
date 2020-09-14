@@ -356,11 +356,12 @@ display: flex;
   
 }
 .menu-btn{
-  height: 30px;
-  width: 30px;
-  background-color: #000;
+  height: 40px;
+  width: 40px;
+
+
   position: absolute;
-  right: -45px;
+  right: -55px;
   top: 10px;
 }
 @media (max-width:900px){
@@ -369,7 +370,6 @@ display: flex;
 }
 .menu__mobile{
   display: flex;
-  
+  z-index: 50;
 }
- 
   }
