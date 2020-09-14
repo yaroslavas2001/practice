@@ -344,7 +344,7 @@ align-items: center;
 .menu__row{
 display: flex;
   justify-content: space-around;
-  align-items: left;
+  align-items: flex-start;
   flex-direction: column;
   height: 50%;
 
