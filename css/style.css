@@ -373,3 +373,121 @@ display: flex;
   z-index: 50;
 }
   }
+  @media (max-width:500px){
+.contacts__item{
+  margin: 10px 0px 10px 20px;
+}
+.map{
+  height: 200px;
+}
+.reason{
+  font-size: 15px;
+}
+.menu__mobile_active{
+  width: 40%;
+}
+.menu__link-mb{
+font-size: 12px;
+}
+.btn{
+ margin:  5px;
+ font-size: 13px;
+}
+.switch{
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+.name__h3{
+  font-size: 14px;
+}
+.submit{
+ width: 90%;
+ margin: 10px;
+}
+.autoplay{
+ display: none;
+  
+}
+ 
+  }
+  @media (max-width:400px){
+.contacts__item a,
+.contacts__item p{
+  font-size: 13px;
+}
+.btn{
+  font-size: 11px;
+ }
+.rule__item{
+  font-size: 10px;
+  margin: 5px;
+}
+.rule__item p{
+ 
+  line-height: 14px;
+}
+.name__h3{
+  font-size: 14px;
+}
+.direction__item{
+  margin: 10px ;
+}
+.direction__item p{
+  font-size: 10px;
+}
+.direction__name{
+  margin: 10px;
+  font-size: 14px;
+}
+.menu__mobile_active{
+  width:50%;
+}
+input{
+  width: 120px;
+}
+.eText{
+  font-size: 10px;
+}
+select{
+  width: 160px;
+}
+.school__img{
+  padding: 0;
+}
+.school__iframe{
+  display: none;
+}
+  }
+  @media (max-width:300px){
+.timeline__date{
+  font-size: 13px;
+}
+.timeline__text{
+  font-size: 12px;
+}
+.timeline{
+  padding: 10px;
+}
+.rule__item{
+  font-size: 10px; 
+  line-height: 14px;
+}
+.rule__item img{
+  margin: 0;
+}
+.name__h3{
+  font-size: 12px;
+}
+.menu__mobile_active{
+  width: 60%;
+}
+  }
+  @media (max-width:250px){
+    .timeline__text{
+      font-size: 10px;
+    }
+    .menu__mobile_active{
+      width: 65%;
+    }
+  }
